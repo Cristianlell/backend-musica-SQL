@@ -6,7 +6,7 @@ const storageService = require("../services/storageService")
 module.exports = {
      getItems: catchAsync(async (req, res) => {
           const data = await storageService.getItems();
-          return res.status(httpStatus.OK).json({ success: true, message: messages.OK, body: data });
+          return res.status(httpStatus.OK).json({ success: true, amount:data.length,message: messages.OK, body: data });
      }),
      getItem: catchAsync(async (req, res) => {
           const data = await storageService.getItem(req);

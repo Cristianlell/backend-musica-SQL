@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
          */
         static associate(models) {
             Storage.hasMany(models.Track, {
-                as: "media",
+                as: "track/s",
                 foreignKey: "mediaId",
                 onDelete: "cascade",
                 onUpdate: "cascade",

@@ -3,8 +3,7 @@ const httpStatus = require("../constants/httpStatus");
 const messages = require("../constants/messages");
 const throwError = require("../helpers/throwError");
 const storageRepository = require("../repositories/storageRepository");
-const { uploadFile } = require("./aws-S3-Service");
-const PUBLIC_URL = process.env.PUBLIC_URL;
+const { uploadFile, deleteFile } = require("./aws-S3-Service");
 const MEDIA_PATH = `${__dirname}/../storage`;
 
 module.exports = {
@@ -46,6 +45,7 @@ module.exports = {
           if (fs.existsSync(filePath)) {
                fs.unlinkSync(filePath);
           }
+          await deleteFile(filename)
           return await storageRepository.deleteItem(req.params.id);
      }
 }
