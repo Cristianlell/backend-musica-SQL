@@ -34,7 +34,7 @@ npm start
 ## Credenciales
 ### Admin:
 ##### - Email: admin@test.com 
-##### - Password: admin
+##### - Password: 123
 ### User:
 ##### - Email: user@test.com 
-##### - Password: user
+##### - Password: 123

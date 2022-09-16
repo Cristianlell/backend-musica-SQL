@@ -4,7 +4,7 @@ let users = [
     name: "admin",
     age: 28,
     email: "admin@test.com",
-    password: "admin",
+    password: "123",
     createdAt: new Date(),
     updatedAt:new Date()
   },
@@ -12,7 +12,7 @@ let users = [
     name: "user",
     age: 28,
     email: "user@test.com",
-    password: "user",
+    password: "123",
     createdAt: new Date(),
     updatedAt:new Date()
   }
