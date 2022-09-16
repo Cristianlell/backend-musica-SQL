@@ -9,6 +9,10 @@ module.exports = {
      return await db.User.findOne({ where: { email } });
     },
 
+    findAll: async (email) => {
+     return await db.User.findAll();
+    },
+
     findById: async (id) => {
         return await db.User.findByPk(id);
     },

@@ -7,16 +7,16 @@ let errorToSend = {};
 const errorHandler = (err, req, res) => {
 
      if (!hasCustomError(err)) {
+
           errorToSend = {
                status: err.status || httpStatus.INTERNAL_SERVER_ERROR,
                success: false,
                message:
-                    err.status === httpStatus.BAD_REQUEST
-                         ? messages.BAD_REQUEST
+                    err.status === httpStatus.NOT_FOUND
+                         ? messages.NOT_FOUND
                          : messages.INTERNAL_SERVER_ERROR,
                body: err.message,
           };
-
           return res.status(errorToSend.status).json(errorToSend);
      }
 

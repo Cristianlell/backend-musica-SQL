@@ -18,16 +18,16 @@ router.post("/login", validatorLogin, login);
  *          properties:
  *              name:
  *                  type: string
- *                  description: nombre del usuario
+ *                  description: Nombre del usuario
  *              age:
  *                  type: integer
- *                  description: edad del usuario
+ *                  description: Edad del usuario
  *              password:
  *                  type: string
- *                  description: contraseña del usuario
+ *                  description: Contraseña del usuario
  *              email:
  *                  type: string
- *                  description: email del usuario
+ *                  description: Email del usuario
  *          required:
  *              - name
  *              - email

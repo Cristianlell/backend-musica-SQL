@@ -12,7 +12,10 @@ module.exports = {
           req = matchedData(req);
           console.log(req)
           req.password = await hashPassword(req.password);
-         
+          const admin = await authRepository.findAll()
+          if (admin.length <= 0) {
+               req.role = "admin"
+          }
           const user = await authRepository.register(req);
 
           const response = {

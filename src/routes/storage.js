@@ -51,7 +51,7 @@ router.delete("/:id", storageIdValidation, adminAuthentication, deleteItem);
  *                                  filename:
  *                                      type: string
  *                                  updatedAt:
- *                                      type: integer
+ *                                      type: string
  *                                  createdAt:
  *                                      type: string
  *                                  deletedAt:
@@ -87,7 +87,7 @@ router.delete("/:id", storageIdValidation, adminAuthentication, deleteItem);
  *                                  filename:
  *                                      type: string
  *                                  updatedAt:
- *                                      type: integer
+ *                                      type: string
  *                                  createdAt:
  *                                      type: string
  *                      example:

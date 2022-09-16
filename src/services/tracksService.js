@@ -25,7 +25,7 @@ module.exports = {
           req.updatedAt = new Date();
           const data = await tracksRepository.createItem(req);
           if (!data) {
-               return throwError(httpStatus.NOT_FOUND, messages.NOT_FOUND);
+               return throwError(httpStatus.BAD_REQUEST, messages.BAD_REQUEST);
           }
           return data;
      },
@@ -39,6 +39,7 @@ module.exports = {
      },
      deleteItem: async (req, res) => {
           const findById = await tracksRepository.getItem(req.params.id);
+          console.log(findById)
           if (!findById) {
                return throwError(httpStatus.NOT_FOUND, messages.NOT_FOUND);
           }
